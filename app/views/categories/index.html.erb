@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="container-fluid">
+      <% @categories.each do |category| %>
+        <%= button_to category.type_of_food, category_path(category.id), {class: "button", id: "#{category.type_of_food.downcase}-button", method: "get"}%>
+      <%end%>
+    </div>
+  </div>
+  <footer>
+    <div class="container-fluid">
+
+        </div>
+      </div>
+
+  </footer>
+</body>
+</html>

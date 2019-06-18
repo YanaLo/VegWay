@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_16_202056) do
+ActiveRecord::Schema.define(version: 2019_06_18_212947) do
 
   create_table "categories", force: :cascade do |t|
     t.string "type_of_food"
@@ -22,11 +22,13 @@ ActiveRecord::Schema.define(version: 2019_06_16_202056) do
     t.string "name"
     t.string "brand"
     t.boolean "soy"
-    t.string "category_id"
+    t.integer "category_id"
     t.integer "price"
     t.integer "calories"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "where_to_buy"
+    t.string "image_url"
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -38,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_06_16_202056) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "email"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

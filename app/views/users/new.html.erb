@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>VegWay</title>
+
 <link href="https://fonts.googleapis.com/scss?family=Aguafina+Script&display=swap" rel="app/stylesheets">
 
 </head>
 
 <body>
-
-  <h1>VegWay </h1>
-  <img width="540px" src ="/assets/matcha.JPG", alt="matcha" />
+  <img class="logo" src ="/assets/vegway.png", alt="matcha" />
   <div class = "Login">
     <%= form_for @user do |f| %>
-    <%= f.label "Log-in" %>
-    <p><%= f.text_field "name" %></p>
+    <%= f.label "Email" %>
+    <p><%= f.email_field "email" %></p>
     <%= f.label "Password" %>
-    <p><%= f.text_field "password" %></p>
+    <p><%= f.password_field "password"%></p>
     <p><%= f.submit "Log-in" %>
+
     <% end %>
   <br>
   </div>
